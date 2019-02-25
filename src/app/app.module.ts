@@ -32,7 +32,7 @@ import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.componen
       return {
         cache: new InMemoryCache(),
         link: httpLink.create({
-          uri: "https://o5x5jzoo7z.sse.codesandbox.io/graphql"
+          uri: "https://o5x5jzoo7z.sse.codesandbox.io/"
         })
       }
     },

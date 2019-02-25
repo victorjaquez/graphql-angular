@@ -3,7 +3,6 @@ import { Apollo } from 'apollo-angular';
 import gql from 'graphql-tag';
 import { Observable } from 'rxjs';
 import { shareReplay, map } from 'rxjs/operators'
-import { resultKeyNameFromField } from 'apollo-utilities';
 
 @Component({
   selector: 'app-exchange-rates',
