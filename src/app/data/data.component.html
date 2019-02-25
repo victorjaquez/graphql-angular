@@ -1,3 +1,9 @@
-<p>
-  data works!
-</p>
+<span style="margin-right: 10px">Search Tweets</span>
+<input type="text" id="search-box" [(ngModel)]="searchText" (ngModelChange)="executeSearch()"/>
+<div class="tweet-list" *ngFor="let tweet of tweets">
+  <div class="tweet">
+    <img class="img-circle" [src]="tweet.user.profile_image_url"/>
+    <h4>{{tweet.user.screen_name}}</h4>
+    <p>{{tweet.text}}</p>
+  </div>
+</div>
