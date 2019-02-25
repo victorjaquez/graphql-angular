@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
 
 import { AppComponent } from './app.component';
 //Used because Apollo HttpLink requires HttpClient
@@ -12,19 +14,22 @@ import { HttpLinkModule, HttpLink } from "apollo-angular-link-http";
 // Place to store data in. Default cache implementation for Apollo. 
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
+import { DataComponent } from './data/data.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ExchangeRatesComponent
+    ExchangeRatesComponent,
+    DataComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ApolloModule,
-    HttpLinkModule
+    HttpLinkModule,
+    FormsModule
   ],
   providers: [{
     provide: APOLLO_OPTIONS,
@@ -32,7 +37,7 @@ import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.componen
       return {
         cache: new InMemoryCache(),
         link: httpLink.create({
-          uri: "https://o5x5jzoo7z.sse.codesandbox.io/"
+          uri: "https://www.graphqlhub.com/graphql"
         })
       }
     },
