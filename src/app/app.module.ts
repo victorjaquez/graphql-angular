@@ -15,6 +15,7 @@ import { HttpLinkModule, HttpLink } from "apollo-angular-link-http";
 import { InMemoryCache } from "apollo-cache-inmemory";
 import { ExchangeRatesComponent } from './exchange-rates/exchange-rates.component';
 import { DataComponent } from './data/data.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 
@@ -29,7 +30,8 @@ import { DataComponent } from './data/data.component';
     HttpClientModule,
     ApolloModule,
     HttpLinkModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [{
     provide: APOLLO_OPTIONS,
